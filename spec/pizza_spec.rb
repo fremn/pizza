@@ -10,14 +10,17 @@ describe Pizza::Pie do
         Pizza::Topping.new('mushroom', vegetarian: true),
         Pizza::Topping.new('pepperoni')
       ]
-      pizza =Pizza::pie.new(toppings)
 
-      expect(Pizza.toppings).to eq(toppings)
+      pizza = Pizza::Pie.new(toppings)
+
+      expect(pizza.toppings).to eq(toppings)
        
     end
   end
 
 end 
+
+##
 
 describe Pizza::Topping do
   describe '.initialize' do
