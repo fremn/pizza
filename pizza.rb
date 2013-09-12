@@ -3,7 +3,11 @@ module Pizza
     attr_accessor :toppings
 
     def initialize(toppings = nil)
-        @toppings = toppings || [Pizza::Topping.new('cheese', vegetarian: true)]
+        @toppings = toppings || cheese =[Pizza::Topping.new('cheese', vegetarian: true)]
+    end
+    #should only return true if all toppings are vegetarian
+    def vegetarian?
+      @toppings.all? {|each_topping| each_topping.vegetarian } # => True
     end
   end
 
