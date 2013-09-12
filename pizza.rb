@@ -9,7 +9,11 @@ module Pizza
     def vegetarian?
       @toppings.all? {|each_topping| each_topping.vegetarian } # => True
     end
+    def add_topping(topping)
+      @toppings << topping
+    end
   end
+
 
   class Topping
     attr_accessor :name, :vegetarian

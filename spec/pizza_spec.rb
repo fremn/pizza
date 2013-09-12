@@ -28,9 +28,18 @@ describe Pizza::Pie do
       pizza = Pizza::Pie.new()
 
       expect(pizza.vegetarian?).to be_true
-
     end
-  end    
+  end 
+  describe '#add_topping' do
+    it "should accept a Topping and add it to the @toppings array" do
+      #Test and add an add_topping method to Pizza::Pie. 
+      #It should accept a Topping and add it to the @toppings array.
+      pizza = Pizza::Pie.new()
+        feta =[Pizza::Topping.new('feta', vegetarian: true)]
+
+      expect(pizza.add_topping(feta)).to eq(pizza.toppings << feta)
+    end 
+  end   
 end 
 
 ##
